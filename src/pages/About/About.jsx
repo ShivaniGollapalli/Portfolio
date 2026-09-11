@@ -34,79 +34,79 @@ function About() {
         </div>
 
         {/* Stats */}
-<div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-  {/* Experience */}
-  <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
-    <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
-        <BriefcaseBusiness size={17} strokeWidth={1.8} />
-      </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {/* Experience */}
+          <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
+                <BriefcaseBusiness size={17} strokeWidth={1.8} />
+              </div>
 
-      <div className="min-w-0">
-        <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-          2+
-        </p>
-        <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
-          Years experience
-        </p>
-      </div>
-    </div>
-  </div>
+              <div className="min-w-0">
+                <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                  2+
+                </p>
+                <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
+                  Years experience
+                </p>
+              </div>
+            </div>
+          </div>
 
-  {/* Features */}
-  <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
-    <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
-        <Layers3 size={17} strokeWidth={1.8} />
-      </div>
+          {/* Features */}
+          <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
+                <Layers3 size={17} strokeWidth={1.8} />
+              </div>
 
-      <div className="min-w-0">
-        <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-          10+
-        </p>
-        <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
-          Production features
-        </p>
-      </div>
-    </div>
-  </div>
+              <div className="min-w-0">
+                <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                  10+
+                </p>
+                <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
+                  Production features
+                </p>
+              </div>
+            </div>
+          </div>
 
-  {/* APIs */}
-  <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
-    <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
-        <Server size={17} strokeWidth={1.8} />
-      </div>
+          {/* APIs */}
+          <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
+                <Server size={17} strokeWidth={1.8} />
+              </div>
 
-      <div className="min-w-0">
-        <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-          100+
-        </p>
-        <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
-          REST APIs delivered
-        </p>
-      </div>
-    </div>
-  </div>
+              <div className="min-w-0">
+                <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                  100+
+                </p>
+                <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
+                  REST APIs delivered
+                </p>
+              </div>
+            </div>
+          </div>
 
-  {/* Applications */}
-  <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
-    <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
-        <Code2 size={17} strokeWidth={1.8} />
-      </div>
+          {/* Applications */}
+          <div className="group rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 transition-all duration-300 hover:border-violet-500/40 hover:bg-zinc-900/60 sm:rounded-2xl sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-violet-400/20 bg-violet-400/10 text-violet-400 sm:h-11 sm:w-11 sm:rounded-xl">
+                <Code2 size={17} strokeWidth={1.8} />
+              </div>
 
-      <div className="min-w-0">
-        <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-          3
-        </p>
-        <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
-          Production apps
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+              <div className="min-w-0">
+                <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                  3
+                </p>
+                <p className="mt-0.5 truncate text-[11px] text-zinc-500 sm:text-sm">
+                  Production apps
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Education */}
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">

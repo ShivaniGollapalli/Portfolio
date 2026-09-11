@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import profile from "../../data/profile";
 import skills from "../../data/skills";
 import Container from "../Container/Container";
+import { FaGithub } from "react-icons/fa";
 
 function Hero() {
   const technologies = [
@@ -58,10 +59,10 @@ function Hero() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-semibold !text-zinc-950 shadow-[0_10px_40px_rgba(255,255,255,0.08)] transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-200 hover:!text-zinc-950"
+                className="group inline-flex items-center gap-3 rounded-full bg-violet-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_40px_rgba(139,92,246,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-violet-400 hover:shadow-[0_12px_45px_rgba(139,92,246,0.30)]"
               >
                 View Projects
-                <span className="text-zinc-950 transition-transform duration-300 group-hover:translate-x-1">
+                <span className="text-white transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
               </Link>
@@ -77,83 +78,69 @@ function Hero() {
               </Link>
             </div>
 
-          {/* Social / Contact Links */}
-<div className="mt-8 flex items-center gap-3 sm:mt-10">
+            {/* Social / Contact Links */}
+            <div className="mt-8 flex items-center gap-3 sm:mt-10">
+              {/* Email */}
+              <a
+                href={`mailto:${profile.email}`}
+                aria-label="Email"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-sm text-violet-400 transition-colors duration-300 group-hover:bg-violet-500/15">
+                  @
+                </span>
 
-  {/* Email */}
-  <a
-    href={`mailto:${profile.email}`}
-    aria-label="Email"
-    className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
-  >
-    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-sm text-violet-400 transition-colors duration-300 group-hover:bg-violet-500/15">
-      @
-    </span>
+                <span className="hidden font-medium sm:inline">Email me</span>
 
-    <span className="hidden font-medium sm:inline">
-      Email me
-    </span>
+                <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
+                  ↗
+                </span>
+              </a>
 
-    <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
-      ↗
-    </span>
-  </a>
+              {/* GitHub */}
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/50 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-zinc-400 transition-all duration-300 group-hover:bg-violet-500/15 group-hover:text-violet-400">
+                  <FaGithub className="h-[17px] w-[17px]" aria-hidden="true" />
+                </span>
 
-  {/* GitHub */}
-  <a
-    href={profile.github}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-    className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
-  >
-    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-zinc-400 transition-colors duration-300 group-hover:bg-violet-500/15 group-hover:text-violet-400">
-      <svg
-        viewBox="0 0 24 24"
-        className="h-4 w-4 fill-current"
-        aria-hidden="true"
-      >
-        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.74-.81 1.19-1.84 1.19-3.1 0-4.42-2.69-5.4-5.25-5.68.41-.36.78-1.07.78-2.16v-3.2c0-.31.21-.68.8-.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-      </svg>
-    </span>
+                <span className="hidden font-medium sm:inline">GitHub</span>
 
-    <span className="hidden font-medium sm:inline">
-      GitHub
-    </span>
+                <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
+                  ↗
+                </span>
+              </a>
 
-    <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
-      ↗
-    </span>
-  </a>
+              {/* LinkedIn */}
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-zinc-400 transition-colors duration-300 group-hover:bg-violet-500/15 group-hover:text-violet-400">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4 fill-current"
+                    aria-hidden="true"
+                  >
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.32ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.99h-3.57v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0Z" />
+                  </svg>
+                </span>
 
-  {/* LinkedIn */}
-  <a
-    href={profile.linkedin}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    className="group flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950/60 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white sm:h-auto sm:w-auto sm:justify-start sm:gap-3 sm:px-3 sm:py-2.5"
-  >
-    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-zinc-400 transition-colors duration-300 group-hover:bg-violet-500/15 group-hover:text-violet-400">
-      <svg
-        viewBox="0 0 24 24"
-        className="h-4 w-4 fill-current"
-        aria-hidden="true"
-      >
-        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.32ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.99h-3.57v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0Z" />
-      </svg>
-    </span>
+                <span className="hidden font-medium sm:inline">LinkedIn</span>
 
-    <span className="hidden font-medium sm:inline">
-      LinkedIn
-    </span>
-
-    <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
-      ↗
-    </span>
-  </a>
-
-</div>
+                <span className="hidden text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-violet-400 sm:inline">
+                  ↗
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* ================= RIGHT VISUAL ================= */}
